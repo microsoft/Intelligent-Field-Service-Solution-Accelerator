@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/0.1.2-preview/CreateUIDefinition.MultiVm.json#",
+  "handler": "Microsoft.Azure.CreateUIDef",
+  "version": "0.1.2-preview",
+  "parameters": {
+    "basics": [
+      {
+        "name": "mainSection",
+        "type": "Microsoft.Common.Section",
+        "label": "Deploying resources using ARM template",
+        "elements": [
+          {
+            "name": "crmOrgId",
+            "type": "Microsoft.Common.TextBox",
+            "label": "CRM Organization Unique Name",
+            "toolTip": "You can find your organization's unique name by navigating to Advanced Settings on your Dynamics organization. Then navigate to Customizations > Developer Resources.",
+            "visible": true,
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "CrmURL",
+            "type": "Microsoft.Common.TextBox",
+            "label": "CRM Organization URL",
+            "visible": true,
+            "constraints": {
+              "required": true
+            }
+          }
+        ]
+      }
+    ],
+    "steps": [],
+    "outputs": {
+      "crmOrgId": "[basics('mainSection').crmOrgId]",
+      "CrmURL": "[basics('mainSection').CrmURL]",
+      "existingSQLServer": "",
+      "isTimeSeriesInsight": false,
+      "DeploySimulator": true,
+      "ApplicationID": "",
+      "ClientSecretID": "",
+      "ObjectID": "",
+      "isPowerBI": false,
+      "administratorLogin": "",
+      "administratorLoginPassword": "",
+      "isAnomalyDetection": true
+    }
+  }
+}
