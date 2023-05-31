@@ -20,11 +20,13 @@ A screen similar to below will be presented to you. Fill in the information as i
 
 ![CFS and AD ARM Template](../Docs/Media/ARM-Deployment-Template-CFS-And-AD.png)
 
-1. Choose an existing Azure subscription. Choose a resource group or create one in the selected subscription. 
-2. Set the region to the same region as your Dynamics 365 Field Service environment.
-3. Enter the [unique name of your organization]([Find your environment and organization ID and name - Power Platform | Microsoft Learn](https://learn.microsoft.com/en-us/power-platform/admin/determine-org-id-name#find-your-organization-name)), and the Dynamics 365 URL of your Field Service environment (format: https://org********.crm.dynamics.com/)
-4. Review and create the resources from the template.
-5. Before proceeding to setting up the solution, ensure the deployment is complete and error free. 
+1. Choose an existing **Azure subscription**.
+1. Choose or create a new **resource group** in the selected subscription. 
+1. Set the **region** to the same region as your Dynamics 365 Field Service environment.
+1. Enter the **unique name** of your organization.  The [Find your environment and organization ID and name - Power Platform | Microsoft Learn](https://learn.microsoft.com/en-us/power-platform/admin/determine-org-id-name#find-your-organization-name) article has steps on how to find this.
+1. Enter the **Dynamics 365 organization URL** of your Field Service environment (format: https://org********.crm.dynamics.com/).
+1. **Review + create** the resources from the template.
+1. Before proceeding to setting up the solution, ensure the deployment is complete and error free. 
 
 # Set up Anomaly Detection Solution 
 
