@@ -1,10 +1,10 @@
-# IFS Anomaly Detection Solution Overview
+# Anomaly Detection Solution Overview
 
-IFS Anomaly Detection solution detects unusual patterns or anomalies in IoT telemetry data in real time. It collects IoT telemetry data and invokes API Services provided by the [Anomaly Detector](https://learn.microsoft.com/en-us/azure/cognitive-services/anomaly-detector/overview). The Anomaly Detector uses machine learning algorithms to analyze time-series data, such as IoT telemetry, logs, and business metrics, and identify anomalies based on historical patterns and trends. Anomaly Detector also provides a confidence score to help assess the severity of the anomaly, enabling field service providers to take appropriate actions. 
+The Anomaly Detection solution detects unusual patterns or anomalies in IoT telemetry data in real time. It collects IoT telemetry data and invokes API Services provided by the [Anomaly Detector](https://learn.microsoft.com/en-us/azure/cognitive-services/anomaly-detector/overview). The Anomaly Detector uses machine learning algorithms to analyze time-series data, such as IoT telemetry, logs, and business metrics, and identify anomalies based on historical patterns and trends. Anomaly Detector also provides a confidence score to help assess the severity of the anomaly, enabling field service providers to take appropriate actions. 
 
 To test the anomaly detection solution, we created a machine learning model using [sample IoT sensor data](../Deployment/Data/sensordata.csv). The machine learning model ID is plugged into an Azure Functions App called `Invoker` that interacts with the Anomaly Detector. The model can be updated with newer data when necessary. When an anomaly is detected, the `Invoker` sends message to Dynamics 365 Field service with confidence score, severity, along with actual IoT telemetry data so that appropriate action can be taken based on this message. How the action is taken can be programmed in Dynamics 365. 
 
-# IFS Anomaly Detection Solution Architecture 
+# Anomaly Detection Solution Architecture 
 
 Below architecture diagram illustrates the main components and information flow of this solution accelerator.
 

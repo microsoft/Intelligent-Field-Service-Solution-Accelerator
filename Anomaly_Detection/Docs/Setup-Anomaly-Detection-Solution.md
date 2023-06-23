@@ -19,8 +19,8 @@ The following steps are for Visual Studio.
 Alternatively the console application can be run [Using Visual Studio Code](./VSCode-Instructions.md).
 
 ### Using Visual Studio
-1. Open the [IFS.AD.sln](../Code/IFS.AD) in Visual Studio. 
-1. In the **Solution Explorer**, right click the `IFS.AD.ConsoleApps.ManageCognitiveServices` project and choose **Manage User Secrets**. A `secrets.json` file will open.   
+1. Open the [AD.sln](../Code/AD) in Visual Studio. 
+1. In the **Solution Explorer**, right click the `AD.ConsoleApps.ManageCognitiveServices` project and choose **Manage User Secrets**. A `secrets.json` file will open.   
     ![Manage user secrets](./Media/ad-step2-vs-manage-user-secrets.png)   
 1. Add the `endpoint`, `apiKey`, and `blobStorageDataSource` JSON properties with values taken from your subscription to the `secrets.json` file. To find the `endpoint` and `apikey`, go to the **Anomaly detector** resource overview page,  at left pane, under **Resource Management**, click **Keys and Endpoint**. You will be presented a page where you can copy and paste the value of the `endpoint` and `apikey` to the `secrets.json` file.  To configure `blobStorageDataSource`, go to the storage account  `storage*************`, copy the account name, and replace `<BLOB_STRAGE>` with the account name.   
     ![secrets.json](./Media/ad-step2-secrets-contents.png)   
