@@ -13,7 +13,7 @@ products:
 
 ![EAE Banner](./Anomaly_Detection/Docs/Media/SA-EAE-Banner.png)
 
-# Intelligent Field Services (IFS) Solution Accelerator 
+# Intelligent Field Service Solution Accelerator 
 
 ## Project Description
 
@@ -21,11 +21,11 @@ Field services involve tasks that are performed at the customer's location, such
 
 There are published open source projects that provide ready to deploy solutions. For example, the [Dynamics 365 Connected Field Service - Azure IoT Deployment Template](https://github.com/microsoft/Dynamics-365-Connected-Field-Service-Deployment) is a solution that uses IoT sensors and data analysis to monitor and service customers' equipment, allowing companies to detect issues remotely and dispatch technicians efficiently. It integrates with Dynamics 365 to provide a comprehensive view of customer data, service history, and technician availability. For more details, please refer to the [CFS for IoT Hub architecture and workflow description](./Anomaly_Detection/Docs/Connected_Field_Service/README.md).
 
-The Intelligent Field Service (IFS) solution accelerator builds additional AI capabilities on top of the Dynamics 365 Connected Field Service for IoT Hub. We provide multivariate anomaly detection solution that leverages [Azure Cognitive Services](https://learn.microsoft.com/en-us/azure/cognitive-services/what-are-cognitive-services) and more AI driven capabilities are planned to be released in the coming months.
+The Intelligent Field Service solution accelerator builds additional AI capabilities on top of the Dynamics 365 Connected Field Service for IoT Hub. We provide multivariate anomaly detection solution that leverages [Azure Cognitive Services](https://learn.microsoft.com/en-us/azure/cognitive-services/what-are-cognitive-services) and more AI driven capabilities are planned to be released in the coming months.
 
-## IFS Anomaly Detection Solution Overview 
+## Anomaly Detection Solution Overview 
 
-IFS Anomaly Detection solution detects unusual patterns or anomalies in IoT telemetry data in real time. It collects IoT telemetry data and invokes API Services provided by the [Anomaly Detector](https://learn.microsoft.com/en-us/azure/cognitive-services/anomaly-detector/overview). The Anomaly Detector uses machine learning algorithms to analyze time-series data, such as IoT telemetry, logs, and business metrics, and identify anomalies based on historical patterns and trends. Anomaly Detector also provides a confidence score to help assess the severity of the anomaly, enabling field service providers to take appropriate actions. 
+The Anomaly Detection solution detects unusual patterns or anomalies in IoT telemetry data in real time. It collects IoT telemetry data and invokes API Services provided by the [Anomaly Detector](https://learn.microsoft.com/en-us/azure/cognitive-services/anomaly-detector/overview). The Anomaly Detector uses machine learning algorithms to analyze time-series data, such as IoT telemetry, logs, and business metrics, and identify anomalies based on historical patterns and trends. Anomaly Detector also provides a confidence score to help assess the severity of the anomaly, enabling field service providers to take appropriate actions. 
 
 To test the anomaly detection solution, we created a machine learning model using [sample IoT sensor data](./Anomaly_Detection/Deployment/Data/sensordata.csv). The machine learning model ID is plugged into an Azure Functions App called `Invoker` that interacts with the Anomaly Detector. The model can be updated with newer data when necessary. When an anomaly is detected, the `Invoker` sends message to Dynamics 365 Field service with confidence score, severity, along with actual IoT telemetry data so that appropriate action can be taken based on this message. How the action is taken can be programmed in Dynamics 365. 
 
@@ -39,7 +39,7 @@ Please refer to the [Deployment Guide](./Anomaly_Detection/Deployment/README.md)
 
 # Planned Future Releases
 
-Additional IFS solution accelerators are under construction and planned to be published in the coming months:
+Additional solution accelerators are under construction and planned to be published in the coming months:
 
 1. Predictive Maintenance Powered by AI
 2. Digital Twins Enablement

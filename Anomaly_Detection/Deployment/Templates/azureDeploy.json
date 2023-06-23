@@ -134,7 +134,7 @@
     "rulesOutputNamespace": "[variables('serviceBusNamespaceName')]",
     "aggregatorFunctionAppName": "[concat('func-anom-msgaggregator-', variables('uniqueIdentifier'))]",
     "aggregatorFunctionName": "Aggregator",
-    "aggregatorFunctionPackageUri": "https://github.com/microsoft/Intelligent-Field-Service-Solution-Accelerator/blob/main/Anomaly_Detection/Deployment/ZipDeployCode/AnomalyDetection/IFS.AD.FunctionApps.IotMessageAggregator.zip?raw=true",
+    "aggregatorFunctionPackageUri": "https://github.com/microsoft/Intelligent-Field-Service-Solution-Accelerator/blob/main/Anomaly_Detection/Deployment/ZipDeployCode/AnomalyDetection/AD.FunctionApps.IotMessageAggregator.zip?raw=true",
     "aggregatorFunctionStorageAccountName": "[concat('aggregator', variables('uniqueIdentifier'))]",
     "anomalyDetectorName": "[concat('cog-anom-', variables('uniqueIdentifier'))]",
     "appConfigurationName": "[concat('appconf-anom-', variables('uniqueIdentifier'))]",
@@ -145,7 +145,7 @@
     "eventGridSystemTopicEventSubscriptionName": "hub2aggregatorfunction",
     "invokerFunctionAppName": "[concat('func-anom-coginvoker-', variables('uniqueIdentifier'))]",
     "invokerFunctionName": "Invoker",
-    "invokerFunctionPackageUri": "https://github.com/microsoft/Intelligent-Field-Service-Solution-Accelerator/blob/main/Anomaly_Detection/Deployment/ZipDeployCode/AnomalyDetection/IFS.AD.FunctionApps.AnomalyDetectorInvoker.zip?raw=true",
+    "invokerFunctionPackageUri": "https://github.com/microsoft/Intelligent-Field-Service-Solution-Accelerator/blob/main/Anomaly_Detection/Deployment/ZipDeployCode/AnomalyDetection/AD.FunctionApps.AnomalyDetectorInvoker.zip?raw=true",
     "invokerFunctionStorageAccountName": "[concat('invoker', variables('uniqueIdentifier'))]"
   },
   "resources": [

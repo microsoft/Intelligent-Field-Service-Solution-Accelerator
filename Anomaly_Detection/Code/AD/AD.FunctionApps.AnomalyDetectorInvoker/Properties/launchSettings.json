@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "AD.FunctionApps.AnomalyDetectorInvoker": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7214",
+      "launchBrowser": false
+    }
+  }
+}
