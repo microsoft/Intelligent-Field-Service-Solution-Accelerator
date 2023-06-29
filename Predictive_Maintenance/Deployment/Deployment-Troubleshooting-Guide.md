@@ -1,0 +1,14 @@
+# Deployment Troubleshooting Guide 
+
+ It is not uncommon that you create a resource that already exists with the same name. If such conflicts occurs, try to use a different prefix and re-deploy. Sometimes you may not have the required privileges  to create certain resources. Follow the deployment guide to learn more about the required privileges. 
+
+You may experience deployment failures, please review the error messages carefully and resolve them. Below list is a sample list that serve as a guide to help you to troubleshoot issues. 
+
+(1) `The client xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx with object id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
+`does not have authorization to perform action 'Microsoft.Authorization/roleAssignments/read.`  **Solution**: Add 'Reader' role to the service principal who runs the ARM template. For detailed instructions, please follow instructions in this document: [Assign Azure roles using the Azure portal - Azure RBAC | Microsoft Learn](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal).
+
+(2) `Customer subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx needs to be registered with Microsoft.Sql resource provider` (or another resource provider). **Solution**: Register the specified resource provider following instructions in this document: [Resource providers and resource types - Azure Resource Manager | Microsoft Learn](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider-1).
+
+(3) If you are re-deploying the resources after deleting resources, you may see this error: `Soft-deleted workspace exists. Please purge or recover it`. **Solution**: Purge the workspace created. For more information, please refer to this document: [Manage soft deleted workspaces](https://learn.microsoft.com/en-us/azure/machine-learning/concept-soft-delete?view=azureml-api-2#manage-soft-deleted-workspaces).
+
+(4) If you are re-deploying the resources after cleaning the resource group you may see this error - `"Identity operation for resource '/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/xxxxxx/providers/Microsoft.ContainerRegistry/registries/xxxxx' failed with error 'Failed to perform resource identity operation. Status: 'Conflict', Message - "Request specified that resource '/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/xxxxxxxxxxxxxx/providers/Microsoft.ContainerRegistry/registries/xxxxxx' is new, but resource already exists. This may be due to a pending delete operation, try again later"`. **Solution**: Wait for all resources to be removed, usually it takes around 5 minutes.

@@ -1,0 +1,36 @@
+{
+    "name": "InferencePipeline",
+    "properties": {
+        "activities": [
+            {
+                "name": "RunInference",
+                "type": "SynapseNotebook",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "notebook": {
+                        "referenceName": "04_run_predictive_maint_inference",
+                        "type": "NotebookReference"
+                    },
+                    "snapshot": true,
+                    "conf": {
+                        "spark.dynamicAllocation.enabled": null,
+                        "spark.dynamicAllocation.minExecutors": null,
+                        "spark.dynamicAllocation.maxExecutors": null
+                    },
+                    "numExecutors": null
+                }
+            }
+        ],
+        "annotations": [],
+        "lastPublishTime": "2023-05-02T18:40:45Z"
+    },
+    "type": "Microsoft.Synapse/workspaces/pipelines"
+}
