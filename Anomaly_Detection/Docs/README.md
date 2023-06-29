@@ -8,7 +8,7 @@ To test the anomaly detection solution, we created a machine learning model usin
 
 Below architecture diagram illustrates the main components and information flow of this solution accelerator.
 
-![SA-Architecture-Anomaly-Detection](./Media/SA-Architecture-Anomaly-Detection.png)
+![SA-Architecture-Anomaly-Detection](./Media/SA-Architecture-Anomaly-Detection-Stand-Out.png)
 
 # Architecture Workflow
 
